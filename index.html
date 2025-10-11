@@ -18,101 +18,115 @@
 </head>
 
 <body class="bg-escuro text-claro">
-  <nav class="navegacao fixed bg-azulescuro w-full z-100 p-2 md:p-5">
-    <ul class="menu flex gap-1 md:gap-3 justify-center">
-      <li><a href="#inicio"
-          class="menu-link flex text-center  items-center text-sm md:text-lg font-medium relative p-1 md:p-2 transition duration-150 hover:text-white">Inicial</a>
-      </li>
-      <li><a href="#sobre"
-          class="menu-link flex text-center  items-center text-sm md:text-lg font-medium relative p-1 md:p-2 transition duration-150 hover:text-white">Sobre
-          Mim</a></li>
-      <li><a href="#projetos"
-          class="menu-link flex text-center  items-center text-sm md:text-lg font-medium relative p-1 md:p-2 transition duration-150 hover:text-white">Projetos</a>
-      </li>
-      <li><a href="#rodape"
-          class="menu-link flex text-center  items-center text-sm md:text-lg font-medium relative p-1 md:p-2 transition duration-150 hover:text-white">Contatos</a>
-      </li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="navegacao fixed bg-azulescuro w-full z-100 p-2 md:p-5 flex md:flex-row md:justify-around">
+      <div class="layer">
 
-  <main id="inicio" class="cabecalho min-h-[100vh] flex justify-center items-center flex-col">
-    <img
-      class="foto-perfil w-[250px] h-[250px] shadow-lg shadow-[rgba(224,173,111,0.3)] rounded-full border-4 border-solid border-vidro"
-      src="img/perfil.jpg" alt="Foto profissional de Gabriel Schug, Desenvolvedor Júnior em Back-End" />
-    <h1 class="text-4xl md:text-6xl text-sky-500 font-bold m-5">
-      Gabriel Schug
-    </h1>
-    <p class="cabecalho-subtitulo text-base md:text-2xl text-claro text-center">
-      Desenvolvedor Júnior em Formação<br />Foco em Back-End e Análise de
-      Dados
-    </p>
+      </div>
+      <div class="container links">
+        <ul class="menu flex gap-1 md:gap-3 justify-center">
+          <li><a href="#inicio"
+              class="menu-link flex text-center  items-center text-sm md:text-lg font-medium relative p-1 md:p-2 transition duration-150 hover:text-white">Inicial</a>
+          </li>
+          <li><a href="#sobre"
+              class="menu-link flex text-center  items-center text-sm md:text-lg font-medium relative p-1 md:p-2 transition duration-150 hover:text-white">Sobre
+              Mim</a></li>
+          <li><a href="#projetos"
+              class="menu-link flex text-center  items-center text-sm md:text-lg font-medium relative p-1 md:p-2 transition duration-150 hover:text-white">Projetos</a>
+          </li>
+          <li><a href="#rodape"
+              class="menu-link flex text-center  items-center text-sm md:text-lg font-medium relative p-1 md:p-2 transition duration-150 hover:text-white">Contatos</a>
+          </li>
+        </ul>
+      </div>
+      <a class="flex flex-col bg-linear-to-r from-cyan-500 to-primaria py-2 px-4 rounded-lg text-white  text-sm text-center font-semibold md:transition md:duration-100 md:ease-in-out md:hover:transform md:hover:translate-y-[-2px] md:hover:scale-105"
+          href="src/docs/Curriculo_GabrielSchug.pdf" download target="_blank" rel="noopener noreferrer">Currículo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="cabecalho min-h-[80vh] flex justify-center items-center flex-col md:flex-row md:gap-20">
+      <img
+        class="foto-perfil w-[250px] h-[250px] shadow-lg shadow-[rgba(224,173,111,0.3)] rounded-full border-4 border-solid border-vidro"
+        src="img/perfil.jpg" alt="Foto profissional de Gabriel Schug, Desenvolvedor Júnior em Back-End" />
+      <div class="flex flex-col">
+        <h1 class="text-4xl md:text-6xl text-sky-500 font-bold m-5">
+          Gabriel Schug
+        </h1>
+        <p class="cabecalho-subtitulo text-base md:text-2xl text-claro text-center">
+          Desenvolvedor Júnior em Formação<br />Foco em Back-End e Análise de
+          Dados
+        </p>
+      </div>
+    </section>
+  
+    <section id="sobre" class="sobre md:px-24 md:py-8">
+      <h2 class="sobre-titulo text-2xl md:text-4xl text-claro text-center mb-4 md:mb-12">
+        Sobre Mim
+      </h2>
+      <div
+        class="sobre-caixa md:p-8 p-4 max-w-[800px] m-2 md:m-[0_auto] rounded-2xl border-1 border-solid border-vidro mb-5 backdrop-blur-md bg-cinza">
+        <p class="sobre-paragrafo text-justify text-sm md:text-lg">
+          <br><strong>Prazer, eu sou o Gabriel!</strong>
+          <br /><br />Desde as minhas primeiras experiências profissionais, sou
+          fascinado por ferramentas que otimizam processos empresariais e apoiam
+          a tomada de decisões. Essa paixão me levou a aprofundar meus
+          conhecimentos em Excel, Power Query e Power BI, explorando o potencial
+          dessas soluções em Análise e Apoio à Decisão. <br><br>
+          Atualmente curso Análise e Desenvolvimento de Sistemas na UniSenac/Pelotas, onde venho
+          desenvolvendo minha lógica de programação e aplicando conhecimentos
+          práticos no desenvolvimento de um aplicativo para Automação de Tarefas
+          Administrativas, utilizando Google AppSheet e Apps Script.<br><br>
+          Meus estudos e projetos estão direcionados principalmente para as áreas de
+          Ciência de Dados e Programação Back-End. <br /><br />Este espaço é
+          dedicado a compartilhar minha trajetória, desafios e conquistas no
+          universo da tecnologia. <br />Aproveite sua visita e sinta-se
+          convidado(a) a conhecer também minhas
+          <a href="#rodape" class=""><span class="font-bold">redes sociais</span></a>!<br>
+        </p>
+      </div>
+    </section>
+  
+    <section id="projetos" class="projetos md:px-24 md:py-8">
+      <h2 class="projetos-titulo text-2xl md:text-4xl text-claro text-center mb-4 md:mb-12">
+        Meus Projetos
+      </h2>
+  
+      <!-- <h2 class="text-base md:text-2xl m-2 text-claro text-center">
+          ... <br />
+          Ainda não há projetos visíveis… <br />mas nos bastidores, ideias estão
+          ganhando forma. <br />Acompanhe minha evolução! <br />...
+        </h2> -->
+  
+  
+      <div
+        class="projetos-caixa flex flex-col md:grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 max-w-[1200px] m-[0_auto]">
+  
+      </div>
+  
+    </section>
   </main>
 
-  <section id="sobre" class="sobre md:px-24 md:py-8">
-    <h2 class="sobre-titulo text-2xl md:text-4xl text-claro text-center mb-4 md:mb-12">
-      Sobre Mim
-    </h2>
-    <div
-      class="sobre-caixa md:p-8 p-4 max-w-[800px] m-2 md:m-[0_auto] rounded-2xl border-1 border-solid border-vidro mb-5 backdrop-blur-md bg-cinza">
-      <p class="sobre-paragrafo text-justify text-sm md:text-lg">
-        <br><strong>Prazer, eu sou o Gabriel!</strong>
-        <br /><br />Desde as minhas primeiras experiências profissionais, sou
-        fascinado por ferramentas que otimizam processos empresariais e apoiam
-        a tomada de decisões. Essa paixão me levou a aprofundar meus
-        conhecimentos em Excel, Power Query e Power BI, explorando o potencial
-        dessas soluções em Análise e Apoio à Decisão. <br><br>
-        Atualmente curso Análise e Desenvolvimento de Sistemas na UniSenac/Pelotas, onde venho
-        desenvolvendo minha lógica de programação e aplicando conhecimentos
-        práticos no desenvolvimento de um aplicativo para Automação de Tarefas
-        Administrativas, utilizando Google AppSheet e Apps Script.<br><br>
-        Meus estudos e projetos estão direcionados principalmente para as áreas de
-        Ciência de Dados e Programação Back-End. <br /><br />Este espaço é
-        dedicado a compartilhar minha trajetória, desafios e conquistas no
-        universo da tecnologia. <br />Aproveite sua visita e sinta-se
-        convidado(a) a conhecer também minhas
-        <a href="#rodape" class=""><span class="font-bold">redes sociais</span></a>!<br>
-      </p>
-    </div>
-  </section>
-
-  <section id="projetos" class="projetos md:px-24 md:py-8">
-    <h2 class="projetos-titulo text-2xl md:text-4xl text-claro text-center mb-4 md:mb-12">
-      Meus Projetos
-    </h2>
-
-    <!-- <h2 class="text-base md:text-2xl m-2 text-claro text-center">
-        ... <br />
-        Ainda não há projetos visíveis… <br />mas nos bastidores, ideias estão
-        ganhando forma. <br />Acompanhe minha evolução! <br />...
-      </h2> -->
-
-
-    <div
-      class="projetos-caixa flex flex-col md:grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 max-w-[1200px] m-[0_auto]">
-
-    </div>
-
-  </section>
-
-  <footer id="rodape" class="mt-10 md:mt-20 mb-4">
+  <footer id="rodape" class="my-10 md:mt-20 ">
     <h2 class="sobre-titulo text-2xl md:text-4xl text-claro text-center mb-4 md:mb-12">
       Contatos
     </h2>
     <div class="contatos flex gap-3 justify-center items-center">
-      <a class="text-sm text-center items-center flex flex-col m-1 p-1 md:transition md:duration-500 md:ease-in-out md:hover:transform md:hover:translate-y-[-10px] md:hover:scale-105"
+      <a class="text-sm text-center items-center flex flex-col m-1 p-1 md:transition md:duration-300 md:ease-in-out md:hover:transform md:hover:translate-y-[-10px] md:hover:scale-105"
         href="https://www.linkedin.com/in/gabrielschug/" target="_blank" rel="noopener noreferrer"><img class="h-12"
           src="img/linkedin_icon.png" alt="Ícone GitHub Gabriel Schug" srcset="" />LinkedIn</a>
-      <a class="text-sm text-center items-center flex flex-col m-1 p-1 md:transition md:duration-500 md:ease-in-out md:hover:transform md:hover:translate-y-[-10px] md:hover:scale-105"
+      <a class="text-sm text-center items-center flex flex-col m-1 bg-linear-to-r from-maisescuro/60 to-cinza/60 p-4 rounded-lg  md:transition md:duration-300 md:ease-in-out md:hover:transform md:hover:translate-y-[-10px] md:hover:scale-105"
           href="src/docs/Curriculo_GabrielSchug.pdf" download target="_blank" rel="noopener noreferrer"><img class="h-12 flex"
-          src="img/curriculum.png" alt="Ícone de Curriculo de Gabriel Schug" srcset="" />Baixar Currículo em PDF</a>
-      <a class="text-sm text-center items-center flex flex-col m-1 p-1 md:transition md:duration-500 md:ease-in-out md:hover:transform md:hover:translate-y-[-10px] md:hover:scale-105"
+          src="img/curriculum.png" alt="Ícone de Curriculo de Gabriel Schug" srcset="" />Acesse meu Currículo</a>
+      <a class="text-sm text-center items-center flex flex-col m-1 p-1 md:transition md:duration-300 md:ease-in-out md:hover:transform md:hover:translate-y-[-10px] md:hover:scale-105"
             href="https://github.com/gabrielschug" target="_blank" rel="noopener noreferrer"><img class="h-12 flex"
               src="img/github_icon.png" alt="Ícone LinkedIn Gabriel Schug" srcset="" />GitHub</a>
     </div>
-    <p id="rodape" class="rodape text-rodape text-sm md:text-center text-center p-1">
-      *Esta página foi construida por mim. Estilizada com Tailwind. Muito obrigado pela sua visita!
+    <p id="rodape" class="rodape mt-10 text-rodape italic text-sm md:text-center text-center p-1">
+      © 2025 Gabriel Schug | Obrigado pela sua visita!
     </p>
   </footer>
+
   <script src="src/scripts.js"></script>
   <script type="application/ld+json">
 {
@@ -126,7 +140,7 @@
     "https://www.linkedin.com/in/gabrielschug/"
   ]
 }
-</script>
+  </script>
 
 </body>
 

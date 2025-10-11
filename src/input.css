@@ -12,4 +12,6 @@
   --color-cinza_card: rgba(50, 49, 59, 0.5);
   --color-texto-card: rgba(217, 204, 197, 0.8);
   --color-rodape: #6c6c6f;
+  --color-gradiente1:background: #100B16;
+  --color-gradientee: background: linear-gradient(90deg,rgba(16, 11, 22, 1) 0%, rgba(79, 70, 229, 1) 50%, rgba(226, 232, 240, 1) 100%);
 }
