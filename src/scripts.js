@@ -25,9 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         projectCard.innerHTML = `
             <a href="${project.link}" target="_blank" rel="noopener noreferrer">
             <div class="projetos-card m-2 bg-cinza_card rounded-2xl backdrop-blur-xs border-1 border-solid border-vidro overflow-hidden md:transition md:duration-500 md:ease-in-out cursor-pointer md:hover:shadow-[0_0_20px_rgba(224,173,111,0.3)] md:hover:transform md:hover:translate-y-[-10px] md:hover:scale-105">
-                <img class= "card-imagem h-[200px] w-full object-cover" 
-                    src="${project.image}" 
-                    alt="${`Imagem de ${project.image}`}"/>
+                <img class= "card-imagem h-[200px] w-full object-cover" src="${project.image}" alt="${`Imagem de ${project.image}`}"/>
                 <div class="projetos-card-texto p-2">
                     <h3 class="card-info mb-1">${project.title}</h3>
                     <p class="card-paragrafo text-texto-card text-justify text-sm">${project.subtitle}</p>
