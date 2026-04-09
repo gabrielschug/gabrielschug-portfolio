@@ -1,19 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const projectsData = [
-        {   title: "Réplica Spotify", 
-            subtitle: "Website replicando o Spotify, utilizando HTML5, CSS3 e JavaScript para interações. Realizei o deploy deste site no GitHub Pages", 
-            image:"src/images/replica_spotify.png", 
-            link:"https://github.com/gabrielschug/pagina-web__replica_spotify"},
-        
-        {   title: "API de Pedidos", 
-            subtitle: "API REST de gerenciamento de pedidos desenvolvida em Node.js + Express. Projeto CRUD com middlewares e boas práticas de back-end.", 
-            image:"src/images/api-pedidos.png", 
-            link:"https://github.com/gabrielschug/api-pedidos"},
-        {   title: "Projeto deste Portfólio", 
-            subtitle: "Aqui está o código que estruturei para criar este portfólio. Utilizo HTML5, Tailwind CSS e JavaScript. Fiz o deploy desta página com o Netlify", 
-            image:"src/images/imagem_portfólio.png", 
-            link:"https://github.com/gabrielschug/pagina-web__Portifolio"}
+        {   
+            title: "LetsGoals - Gestão de Metas", 
+            subtitle: "Aplicação Web mobile-first para metas financeiras colaborativas. Desenvolvida com React, Tailwind CSS e Context API, focada em UX e persistência de dados.", 
+            image: "src/images/lets-goals-app.png",
+            link: "https://github.com/gabrielschug/letsgoals"
+        },
+        {   
+            title: "Library Manager (POO & Jest)", 
+            subtitle: "Sistema de backend em TypeScript focado em Programação Orientada a Objetos. Implementação de Herança, Polimorfismo e Testes Unitários com Jest.", 
+            image: "src/images/sistema-biblioteca-poo.png",
+            link: "https://github.com/gabrielschug/library-manager-typescript"
+        },
+        {   
+            title: "API REST de Pedidos", 
+            subtitle: "Servidor robusto em Node.js e Express para gestão de pedidos. Implementação de Middlewares de validação, UUID e padrões RESTful.", 
+            image: "src/images/api-pedidos.png", 
+            link: "https://github.com/gabrielschug/api-pedidos"
+        },
+        {   
+            title: "Réplica Spotify", 
+            subtitle: "Estudo de interface e responsividade replicando o layout do Spotify. Focado em CSS moderno (Flexbox/Grid) e estruturação semântica.", 
+            image: "src/images/replica_spotify.png", 
+            link: "https://github.com/gabrielschug/pagina-web__replica_spotify"
+        }
     ]
     
     const projectsGrid = document.querySelector('.projetos-caixa')
