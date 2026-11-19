@@ -1,46 +1,75 @@
-# 👨‍💻 Portfólio Pessoal - Gabriel Schug
+# React + TypeScript + Vite
 
-> O código por trás da minha vitrine profissional na web.  
-> 🌐 **Acesse o site ao vivo:** [gabrielschug.com.br](https://www.gabrielschug.com.br/)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![Status](https://img.shields.io/badge/Status-Online-brightgreen)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?logo=tailwind-css)
-![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=black)
-![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel)
+Currently, two official plugins are available:
 
-## 📍 Sobre o Projeto
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Este repositório contém o código-fonte do meu portfólio pessoal. Ele foi projetado para ser uma Single Page Application (SPA), focada em apresentar minha trajetória acadêmica, habilidades técnicas e os principais projetos da minha carreira em Análise e Desenvolvimento de Sistemas.
+## React Compiler
 
-Optei por não utilizar frameworks pesados (como React) neste momento para demonstrar domínio sólido sobre as tecnologias base da Web.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠️ Decisões de Arquitetura e Tecnologias
+## Expanding the ESLint configuration
 
-* **Estrutura:** HTML5 Semântico.
-* **Estilização:** **Tailwind CSS** (via CLI). Toda a responsividade (Mobile-First) e os efeitos visuais (Glassmorphism e hover states) foram construídos utilizando classes utilitárias, garantindo um CSS final minificado e rápido.
-* **Dinamismo (JavaScript):** Em vez de escrever o HTML de cada projeto manualmente, utilizei manipulação de DOM (`document.createElement`) com JavaScript Vanilla. Os dados dos projetos são lidos de um Array de Objetos, tornando o portfólio escalável e fácil de atualizar.
-* **SEO e Meta Tags:** O arquivo `index.html` está otimizado com tags Open Graph para garantir uma boa visualização em links compartilhados no LinkedIn, WhatsApp e motores de busca.
-* **Deploy e CI/CD:** O projeto está conectado à **Vercel**. Qualquer push na branch `main` deste repositório gera uma nova build do Tailwind e atualiza o site no domínio oficial em segundos.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## ⚙️ Como executar localmente
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-Caso queira clonar este projeto para rodar em sua máquina:
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-```bash
-# 1. Clone o repositório
-git clone [https://github.com/gabrielschug/gabrielschug-portfolio.git](https://github.com/gabrielschug/gabrielschug-portfolio.git)
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-# 2. Acesse a pasta
-cd gabrielschug-portfolio
-
-# 3. Instale as dependências (Tailwind CLI)
-npm install
-
-# 4. Inicie o processo de build do Tailwind em modo 'watch'
-npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 ```
 
-Após iniciar o Tailwind, basta abrir o arquivo `index.html` no seu navegador ou utilizar a extensão Live Server do VS Code.
+You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
-## ✍️ Contato
-Conecte-se comigo para conversarmos sobre tecnologia, Back-End e dados!
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+
+```
